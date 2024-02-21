@@ -140,10 +140,16 @@ class UserController {
     user.refreshToken = refreshToken;
     await user.save();
 
+    const oneDay = 24 * 60 * 60 * 1000;
+
+    const expirationDate = new Date(Date.now() + 7 * oneDay);
+
     res.cookie("accessToken", accessToken, {
       httpOnly: true,
       secure: true,
       sameSite: "None",
+      domain: "benchmarking-frontend.vercel.app",
+      expires: expirationDate,
     });
 
     const userObj = {

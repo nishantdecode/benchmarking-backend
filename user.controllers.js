@@ -144,8 +144,6 @@ class UserController {
 
     const expirationDate = new Date(Date.now() + 7 * oneDay);
 
-    req.session.user = user
-
     res.cookie("accessToken", accessToken, {
       httpOnly: true,
       secure: true,

@@ -19,6 +19,12 @@ mongoose
 const corsOptions = {
   origin: ["https://benchmarking-frontend.vercel.app"], // Replace with your allowed origins
   credentials: true, // Allow cookies
+  methods: ['GET', 'PUT', 'POST', 'DELETE', 'OPTIONS'],
+  allowedHeaders: [
+    'Access-Control-Allow-Origin',
+    'Content-Type',
+    'Authorization',
+  ]
 };
 
 app.use(cors(corsOptions));

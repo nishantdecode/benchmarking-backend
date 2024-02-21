@@ -1,6 +1,5 @@
 const { User } = require("./user.model");
 const crypto = require('crypto');
-const http = require('http')
 
 class UserController {
   //@desc Register a user
@@ -75,7 +74,7 @@ class UserController {
     res.cookie("accessToken", newAccessToken, {
       httpOnly: true,
       secure: true,
-      sameSite: "Lax",
+      sameSite: "None",
     });
 
     console.log('success')
@@ -144,7 +143,7 @@ class UserController {
     res.cookie("accessToken", accessToken, {
       httpOnly: true,
       secure: true,
-      sameSite: "Lax",
+      sameSite: "None",
     });
 
     const userObj = {

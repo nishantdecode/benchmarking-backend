@@ -16,12 +16,12 @@ mongoose
   .then((res) => console.log("💽 Database is Connected Successfully"))
   .catch((err) => console.log("Please Restart Server", err));
 
-const corsOptions = {
-  origin: ["https://benchmarking-frontend.vercel.app"], // Replace with your allowed origins
-  credentials: true, // Allow cookies
-};
+// const corsOptions = {
+//   origin: ["https://benchmarking-frontend.vercel.app"], // Replace with your allowed origins
+//   credentials: true, // Allow cookies
+// };
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cookieParser());

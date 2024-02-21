@@ -148,7 +148,7 @@ class UserController {
       httpOnly: true,
       secure: true,
       sameSite: "None",
-      domain: "benchmarking-frontend.vercel.app",
+      domain: ".benchmarking-frontend.vercel.app",
       expires: expirationDate,
     });
 

@@ -17,7 +17,7 @@ mongoose
   .catch((err) => console.log("Please Restart Server", err));
 
 const corsOptions = {
-  origin: ["*"], // Replace with your allowed origins
+  origin: ["https://benchmarking-frontend.vercel.app"], // Replace with your allowed origins
   credentials: true, // Allow cookies
 };
 
